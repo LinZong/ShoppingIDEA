@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Shopping:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Shopping_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Shopping" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="mysql-connector-java-3.1.13-bin.jar" module-name="Shopping" />
+          <element id="library" level="module" name="commons-fileupload-1.1.1.jar" module-name="Shopping" />
+          <element id="library" level="module" name="commons-io-1.2.jar" module-name="Shopping" />
+          <element id="library" level="module" name="jfreechart-1.0.2.jar" module-name="Shopping" />
+          <element id="library" level="module" name="jcommon-1.0.5.jar" module-name="Shopping" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Shopping/web/Web" />
+    </root>
+  </artifact>
+</component>
