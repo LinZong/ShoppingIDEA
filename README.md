@@ -56,6 +56,20 @@ conn = DriverManager.getConnection("jdbc:mysql://server-ip:port/shopping?user=yo
 	
 	实在不行可以尝试在IDEA -> Project Structure ->Artifacts -> 点击加号新增一个Web Application : Archive。确认退出，然后Build -> Build Artifacts -> 选择刚刚新建的Artifact，Build。完成后在IDEA的输出目录（一般为out）下找到新生成的war包，把它部署在一个你自己喜欢的容器里……
 	
-	如果对此问题有更好的解决方法，欢迎Pull Request。
+
+>	**这里给出手动把war包部署到当前正在运行的GlassFish中的方法**
+>
+>	0. 确保当前GlassFish容器服务正常运行。
+>	
+>	1. 按照上述操作完成打war包。假设输出的war包名称为```Shopping.war```
+>	
+>	2. 再次进入放有asadmin的文件夹, 终端输入
+>	
+>	 asadmin deploy /path/to/Shopping.war
+>	
+>	如果提示部署成功, 可以访问 http://localhost:8080/Shopping 或者你自己设置的网址访问容器中正在托管的Shopping网站。
+
+
+​	如果对此问题有更好的解决方法，欢迎Pull Request。
 
 4. 如果你成功了，欢迎开个issue告诉大家。
