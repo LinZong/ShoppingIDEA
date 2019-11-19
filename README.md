@@ -62,7 +62,7 @@ conn = DriverManager.getConnection("jdbc:mysql://server-ip:port/shopping?user=yo
 	> 或者参考[Issue #1](https://github.com/LinZong/ShoppingIDEA/issues/1) 的解决方法。
 	
 	>	**顺便给出手动把war包部署到当前正在运行的GlassFish中的方法**
->
+	>
 	>	0. 确保当前GlassFish容器服务正常运行。
 	>	
 	>	1. 按照上述操作完成打war包。假设输出的war包名称为```Shopping.war```
