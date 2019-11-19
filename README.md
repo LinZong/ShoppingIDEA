@@ -2,7 +2,7 @@
 
 ### 一般情况下的运行步骤
 
-0. 克隆本仓库到本地，注意不要使用老师给的版本，此版本已做IDEA兼容及Servlet容器部署的预设置
+0. 克隆本仓库到本地**纯英文路径，不要包含空格**，注意不要使用老师给的版本，此版本已做IDEA兼容及Servlet容器部署的预设置
 
 1. 确保本机使用JDK 8（已知JDK12会导致GlassFish报错，懒得研究为什么）
 2. 打开IDEA，Open 当前文件夹
@@ -54,8 +54,9 @@ conn = DriverManager.getConnection("jdbc:mysql://server-ip:port/shopping?user=yo
 	
 	观察终端中输出的信息，如果报错了（最好不过），可以尝试按照报错信息去进行进一步的处理。如果它报错报得不明就里，可以尝试完全卸载并重装JDK8。~~或者如果你在实验室，请重启机器；如果你在宿舍，请重装系统。~~
 	
-	实在不行可以尝试在IDEA -> Project Structure ->Artifacts -> 点击加号新增一个Web Application : Archive。确认退出，然后Build -> Build Artifacts -> 选择刚刚新建的Artifact，Build。完成后在IDEA的输出目录（一般为out）下找到新生成的war包，把它部署在一个你自己喜欢的容器里……
+	实在不行可以尝试在IDEA -> Project Structure ->Artifacts -> 点击加号新增一个Web Application : Archive。确认退出，然后Build -> Build Artifacts -> 选择刚刚新建的Artifact，Build。完成后在IDEA的输出目录（一般为out）下找到新生成的war包，把它部署在一个你自己喜欢的容器里。
 	
+	2019年11月19日 发现有一些start-domain报Could not find or load main class: File.Java.xxxxx 错误的同学通过换用Tomcat 8.5.47可以部署成功。如出现同样问题可以试试。
 
 >	**这里给出手动把war包部署到当前正在运行的GlassFish中的方法**
 >
